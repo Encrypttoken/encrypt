@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secured Blockchain Protocol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap">
+    <link rel="icon" href="images/image-fa.png" type="image/png">
+</head>
+<body>
+    <div class="video-background-container">
+        <div class="video-background">
+            <video autoplay muted loop id="hackers_video">
+                <source src="videos/hackers_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <header class="black-bg">
+            <div class="logo-name">
+                <img src="images/image-fa.png" alt="Site Logo" class="site-logo">
+                <span class="site-name">Encrypt</span>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li class="has-submenu">
+                        <a href="#investments">Investments</a>
+                        <ul class="submenu">
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#opportunities">Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#mining">Mining</a></li>
+                    <li><a href="staking.html">Staking</a></li>
+                    <li><a href="#whitepaper">WhitePaper</a>
+                        <ul class="submenu">
+                            <li><a href="#faqs">FAQs</a></li>
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-container">
+            <div class="main-message">
+                <h1>Transforming investment security with blockchain innovation.</h1>
+                <br>
+                <p>At Encrypt, we harness blockchain technology to redefine investment security. Our solutions enhance interoperability across blockchain networks, streamline settlement processes, and safeguard identities with decentralized privacy. We promote financial inclusion through micro-investments, ensure transparent governance with blockchain-based voting, and facilitate liquidity in private markets. Join us to explore sustainable investments and embark on a journey towards a secure and inclusive financial future.</p>
+            </div>
+            
+            <!-- Presale Section -->
+            <div class="presale-container">
+                <h2 id="tokenPresale">Token Presale</h2>
+                <div id="glowing-border"></div> <!-- Glowing border -->
+                <div id="countdown">
+                    <div>
+                        <span id="days"></span>
+                        <div>Days</div>
+                    </div>
+                    <div>
+                        <span id="hours"></span>
+                        <div>Hours</div>
+                    </div>
+                    <div>
+                        <span id="minutes"></span>
+                        <div>Minutes</div>
+                    </div>
+                    <div>
+                        <span id="seconds"></span>
+                        <div>Seconds</div>
+                    </div>
+                </div>
+                <div id="networkSwitcher">
+                    <button id="bnbButton">Binance Smart Chain</button>
+                    <button id="solButton">Solana Network</button>
+                </div>
+                <div id="exchangeRates">
+                    <p id="bnbRate" style="display:none;">BNB Rate: 1 BNB = 5,000,000 ECT</p>
+                    <p id="solRate" style="display:none;">SOL Rate: 1 SOL = 1,250,000 ECT</p>
+                </div>
+                <div class="buy-box" id="bnbBuyBox" style="display: none;">
+                    <input type="number" id="bnbAmount" step="any" placeholder="Minimum Buy: 0.5 BNB" min="0.5" inputmode="decimal">
+                    <input type="text" id="bnbEquivalentECT" placeholder="Equivalent in ECT" readonly>
+                    <button class="buy-token" data-network="bnb" style="display: none;">Buy Token</button>
+                    <div id="bnbOwnerAddress" style="display: none;">Send BNB To this Address: <span>0xAE76ec2222A83777260569F3e25F5444E94EAD28</span></div>
+                </div>
+                <div class="buy-box" id="solBuyBox" style="display: none;">
+                    <input type="number" id="solAmount" step="any" placeholder="Minimum Buy: 0.5 SOL" min="0.5" inputmode="decimal">
+                    <input type="text" id="solEquivalentECT" placeholder="Equivalent in ECT" readonly>
+                    <button class="buy-token" data-network="sol" style="display: none;">Buy Token</button>
+                    <div id="solOwnerAddress" style="display: none;">Send SOL To this Address: <span>8xXveij6yxus6mLufk44gmPeh9vbkbxCLJVwP6HoKAuW</span></div>
+                </div>
+                <div id="status"></div>
+                <div id="paymentCountdown" style="display: none;">
+                    <p>Time left to complete payment: <span id="paymentTimer"></span></p>
+                </div>
+                <p>Your ECT token will be transferred to your deposit wallet address shortly.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Additional Sections -->
+    <section class="extra-section" style="background-color: black; color: white; display: flex; align-items: center; padding: 20px;">
+        <div style="flex: 1;">
+            <h2 style="font-family: 'Playfair Display', serif;">Encrypt Security Oracle</h2>
+            <p style="margin-top: 20px;">
+                Our Encrypt Security Oracle offers unparalleled on-chain safeguards designed to provide
+                real-time security insights and preemptively prevent cyber-attacks. Leveraging advanced blockchain
+                technology, our oracle continuously monitors network activity, identifying potential vulnerabilities
+                and mitigating risks before they can impact your assets. This innovative solution ensures the highest
+                level of security, making your blockchain transactions and investments not only safer but
+                also more reliable.
+            </p>
+        </div>
+        <div style="flex: 1;">
+            <img src="images/code_animate.gif" alt="Security Image" style="width: 100%; height: auto;">
+        </div>
+    </section>
+
+    <!-- Image Section Below Encrypt Security Oracle -->
+    <section style="background-color: black; text-align: center; padding: 20px 0;">
+        <div style="margin: 0 20px; border: 2px solid black; padding: 10px;">
+            <img src="images/add-box.png" alt="Descriptive Image" style="width: 100%; height: auto;">
+        </div>
+    </section>
+
+    <!-- Additional Sections -->
+    <section class="extra-section" style="background-color: black; color: white; display: flex; align-items: center; padding: 20px;">
+        <div style="flex: 1;">
+            <img src="images/add-play.png" alt="Security Image" style="width: 80%; height: auto;">
+        </div>
+        <div style="flex: 1;">
+            <h2 style="font-family: 'Playfair Display', serif;">Encrypt Chain Architecture</h2>
+            <p style="margin-top: 20px;">
+                Encrypt Chain is meticulously engineered to constitute the foundational infrastructure of
+                verifiable trust, serving all stakeholders within the blockchain ecosystem.
+                Conceived from its inception with a paramount emphasis on blockchain security,
+                Encrypt Chain aspires to leverage avant-garde security technologies, thereby facilitating
+                an unparalleled echelon of security within the blockchain sphere.
+            </p>
+            <p style="margin-top: 20px;">
+                Encrypt Chain architecture is predicated on a robust modular framework, designed to
+                offer seamless integration and interoperability with existing systems while maintaining
+                stringent security protocols. Our architecture ensures data integrity, confidentiality, and
+                availability, fostering a secure environment for all blockchain transactions and operations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Staking Process Preview Section -->
+    <section class="extra-section" style="background-color: black; color: white; padding: 20px;">
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif;">Staking on Encrypt Chain</h2>
+        <p style="margin-top: 20px; font-family: 'Playfair Display', serif;">
+            A token holder can delegate their tokens to one of the validators to receive staking rewards. Rewards are earned proportionally based on the amount of delegated tokens. Since only bonded validators receive staking rewards and fee distributions, only those who delegate to bonded validators are eligible to earn the corresponding rewards. The minimum staking amount per transaction is 5,000,000 ECT. Detailed reward rates and the token minting/burning process are discussed in the staking section.</p>
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="staking.html" class="button">Learn More</a>
+        </p>
+    </section>
+
+    <section class="extra-section" style="background-color: black; color: white; padding: 20px;">
+        <h2 style="text-align: center; font-family: 'Playfair Display', serif;">Encrypt Token</h2>
+        <p style="text-align: center; margin-top: 20px; font-family: 'Playfair Display', serif;">
+            The Encrypt token (ECT) is the native currency of the Encrypt Chain, serving as the
+            fundamental medium of exchange and utility within our ecosystem. ECT is integral to
+            accessing various features and services on the Encrypt Chain, including staking,
+            transaction fees, and governance voting. By holding and utilizing ECT, users can
+            actively participate in the network, influence its direction, and benefit from its growth
+            and success.
+        </p>
+        <p style="text-align: center; margin-top: 20px; font-family: 'Playfair Display', serif;">
+            The Encrypt tokenomics model is designed to ensure the sustainability and
+            long-term value appreciation of ECT, with mechanisms in place to control
+            supply and incentivize holding and usage. As the Encrypt Chain ecosystem
+            expands and evolves, the demand for ECT is expected to grow, further driving
+            its value and utility.
+        </p>
+    </section>
+
+    <footer class="footer" style="background-color: black; color: white; text-align: center; padding: 20px;">
+        <p>&copy; 2024 Encrypt. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

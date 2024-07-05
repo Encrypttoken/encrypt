@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staking on Encrypt Chain</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/image-fa.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header, .footer {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .footer p {
+            margin: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+        .content p, .content ul {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        .content ul {
+            padding-left: 20px;
+        }
+        .content ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Staking on Encrypt Chain</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#investments">Investments</a></li>
+                <li><a href="index.html#mining">Mining</a></li>
+                <li><a href="staking.html">Staking</a></li>
+                <li><a href="index.html#support">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <p>Analogous to numerous other Proof-of-Stake blockchains, Encrypt Chain incentivizes token holders who opt to stake their tokens.</p>
+        <p>Staking is pivotal in fortifying the chain security, augmenting the voting power required to prevent any malicious entity from seizing control of the chain. On an individual level, the primary impetus for staking tokens lies in the staking rewards, which are contingent upon the network’s status.</p>
+        <p>To achieve the status of a bonded validator, a full chain node must rank within the top 100 in voting power. The upper limit for bonded validators is set at 100.</p>
+        <p>Encrypt Chain employs Tendermint as its consensus algorithm. For each block, a predetermined number of tokens is allocated among the bonded validators to incentivize their participation in the protocol. Key parameters include:</p>
+        <ul>
+            <li>The block proposer is entitled to claim 5% of the total block reward.</li>
+            <li>The remaining minted tokens are distributed among all other validators.</li>
+            <li>Block proposers are selected via a round-robin mechanism based on the validators voting power.</li>
+        </ul>
+        <p>Additionally, validators have the discretion to set a commission rate, providing them with an incentive to accept delegations by enabling fees for maintaining the validator node.</p>
+        <p>A token holder can delegate their tokens to one of the validators to receive staking rewards. Rewards are earned proportionally based on the amount of delegated tokens. Since only bonded validators receive staking rewards and fee distributions, only those who delegate to bonded validators are eligible to earn the corresponding rewards. The minimum staking amount per transaction is 5,000,000 ECT. Detailed reward rates and the token minting/burning process are discussed in the subsequent section.</p>
+        <p>Validators, as participants in the Tendermint consensus algorithm, face penalties for infractions, whether intentional or accidental. Staked ECT is subject to slashing under two circumstances: double signing and being offline. A bonded validator is deemed "offline" if it fails to participate in the consensus protocol for a specified duration. Post-slashing, the validator enters a tombstone state, during which it cannot be slashed again until it un-jails itself.</p>
+        <p>Validators have the option to unbond their staked tokens, initiating a 21-day period during which the tokens are locked. In the event of a validator unbonding, their delegators may choose to re-delegate to other validators to continue earning staking rewards. If not, the delegators will cease to earn further rewards, as the unbonded validator is effectively removed from the validator set.</p>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Encrypt. All rights reserved.</p>
+    </div>
+</body>
+</html>

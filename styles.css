@@ -395,38 +395,35 @@ footer nav ul li a:hover {
     }
 }
 
-/* Additional mobile portrait view styles */
-@media (orientation: portrait) {
+@media (max-width: 768px) and (orientation: portrait) {
     .main-container {
         flex-direction: column;
-        align-items: center;
     }
 
-    .main-message, .presale-container {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    header {
-        position: absolute;
-        background-color: transparent;
-    }
-
-    /* Ensuring extra sections are clear and visible */
     .extra-section {
-        width: 100%;
-        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
     }
 
-    .extra-section img, .extra-section gif {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    .extra-section .message {
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 10px;
     }
 
-    .extra-section p {
-        font-size: 1.2rem;
-        text-align: center;
+    .extra-section .image,
+    .extra-section .gif {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .the-encrypt-chain-architecture {
+        flex-direction: column;
+    }
+
+    .the-encrypt-chain-architecture img {
+        order: 2;
     }
 }
